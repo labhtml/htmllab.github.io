@@ -1,0 +1,247 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="theme-color" content="#101827">
+<title>HTML PROGRAM | Practical Programs</title>
+<style>
+:root{--bg:#f3f6fb;--card:#fff;--ink:#172033;--muted:#68758a;--accent:#2563eb;--code:#111827;--line:#e5eaf2}
+*{box-sizing:border-box}
+body{margin:0;background:var(--bg);color:var(--ink);font-family:Arial,Helvetica,sans-serif;line-height:1.55}
+header{background:#101827;color:#fff;padding:23px 18px;text-align:center;border-bottom:4px solid #3b82f6}
+.brand{font-size:23px;font-weight:800;letter-spacing:1.5px}
+.brand span{color:#60a5fa}
+header p{margin:5px 0 0;color:#cbd5e1;font-size:13px;letter-spacing:1px}
+main{width:min(900px,calc(100% - 28px));margin:32px auto 50px}
+.intro{text-align:center;margin-bottom:28px}
+.eyebrow{font-size:11px;font-weight:700;letter-spacing:2px;color:var(--accent)}
+h1{font-size:clamp(25px,5vw,36px);margin:7px 0;color:#111827}
+.intro p{margin:0;color:var(--muted)}
+.count{display:inline-block;margin-top:15px;background:#e5edff;color:#1d4ed8;padding:6px 13px;border-radius:30px;font-size:12px;font-weight:700}
+.program{background:var(--card);border:1px solid var(--line);border-radius:13px;margin:18px 0;overflow:hidden;box-shadow:0 5px 18px rgba(15,23,42,.045)}
+.program-head{padding:17px 20px 12px}
+.number{font-size:11px;letter-spacing:1.5px;font-weight:800;color:var(--accent)}
+h2{font-size:19px;margin:4px 0 0}
+.description{color:var(--muted);font-size:13px;margin:6px 0 0}
+.code-top{display:flex;align-items:center;justify-content:space-between;background:#1f2937;color:#e5e7eb;padding:9px 14px;font-size:12px;gap:12px}
+.copy{border:1px solid #64748b;background:#334155;color:#fff;border-radius:6px;padding:6px 11px;font-weight:700;cursor:pointer;white-space:nowrap}
+.copy:hover{background:#475569}
+pre{margin:0;padding:18px;overflow-x:auto;background:var(--code);color:#e5e7eb;font:13px/1.65 Consolas,Monaco,"Courier New",monospace;tab-size:4}
+code{white-space:pre}
+footer{text-align:center;padding:23px 15px;background:#101827;color:#cbd5e1;font-size:12px}
+footer strong{color:#fff;letter-spacing:1px}
+@media(max-width:600px){main{margin-top:24px}.program-head{padding:15px 15px 10px}h2{font-size:17px}pre{font-size:12px;padding:14px}.code-top{padding:8px 12px}}
+</style>
+</head>
+<body>
+<header>
+  <div class="brand">HTML <span>PROGRAM</span></div>
+  <p>BCA / HTML &amp; JAVASCRIPT PRACTICALS</p>
+</header>
+<main>
+  <section class="intro">
+    <div class="eyebrow">PROGRAMMING LAB / BCA</div>
+    <h1>HTML Practical Programs</h1>
+    <p>A collection of practical programs and source codes.</p>
+    <div class="count">05 PROGRAMS AVAILABLE</div>
+  </section>
+  <article class="program">
+    <div class="program-head"><div class="number">PROGRAM 09</div><h2>Fibonacci Series</h2><p class="description">Write a program to display Fibonacci series using JavaScript.</p></div>
+    <div class="code-top"><span>HTML / JAVASCRIPT SOURCE CODE</span><button class="copy" type="button">Copy Code</button></div>
+    <pre><code>&lt;html&gt;
+&lt;head&gt;
+&lt;title&gt;Fibonacci Series&lt;/title&gt;
+&lt;/head&gt;
+&lt;body&gt;
+&lt;script type=&quot;text/javascript&quot;&gt;
+var fib1=0;
+var fib2=1;
+var fib3;
+var num=prompt(&quot;Enter limit&quot;);
+if (num!=null&amp;&amp;num&gt;0)
+{
+    document.write(&quot;&lt;h2&gt; First &quot;+num+&quot; numbers in the fibonacci series are &lt;/h2&gt;&quot;);
+    if (num==1)
+    {
+        document.write(&quot;&lt;h2&gt;&quot;+fib1+&quot;&lt;/h2&gt;&quot;);
+    }
+    else
+    {
+        document.write(fib1+&quot;&lt;br /&gt;&quot;);
+        document.write(fib2+&quot;&lt;br /&gt;&quot;);
+    }
+    for( var i=3; i&lt;=num;i++)
+    {
+        fib3=fib1+fib2;
+        document.write(fib3+&quot;&lt;br /&gt;&quot;);
+        fib1=fib2;
+        fib2=fib3;
+    }
+}
+else
+{
+    alert(&quot;Invalid input&quot;);
+}
+&lt;/script&gt;
+&lt;/body&gt;
+&lt;/html&gt;</code></pre>
+  </article>
+  <article class="program">
+    <div class="program-head"><div class="number">PROGRAM 10</div><h2>Square of a Number</h2><p class="description">Write a program to display the square of given numbers using JavaScript.</p></div>
+    <div class="code-top"><span>HTML / JAVASCRIPT SOURCE CODE</span><button class="copy" type="button">Copy Code</button></div>
+    <pre><code>&lt;html&gt;
+&lt;head&gt;
+&lt;title&gt;Square of a number&lt;/title&gt;
+&lt;/head&gt;
+&lt;body&gt;
+&lt;script type=&quot;text/javascript&quot;&gt;
+var num=prompt(&quot;enter number of terms&quot;)
+var message;
+if(num&gt;0&amp;&amp;num!=null)
+{
+    message=&quot;Numbers and its squares are\n&quot;;
+    for(i=1;i&lt;=num;i++)
+    {
+        message=message+i+&quot;^2=&quot;+i*i+&quot;\n&quot;;
+    }
+    alert(message);
+}
+else
+{
+    alert(&quot;invalid input&quot;);
+}
+&lt;/script&gt;
+&lt;/body&gt;
+&lt;/html&gt;</code></pre>
+  </article>
+  <article class="program">
+    <div class="program-head"><div class="number">PROGRAM 11</div><h2>Reverse a Number</h2><p class="description">Write a program to reverse a number using JavaScript.</p></div>
+    <div class="code-top"><span>HTML / JAVASCRIPT SOURCE CODE</span><button class="copy" type="button">Copy Code</button></div>
+    <pre><code>&lt;html&gt;
+&lt;head&gt;
+&lt;title&gt;reverse&lt;/title&gt;
+&lt;/head&gt;
+&lt;body onload=&quot;function_reverse()&quot;&gt;
+&lt;script&gt;
+function function_reverse()
+{
+    var number=prompt(&quot;enter the number to be reversed&quot;);
+    var n=number;
+    var temp=0,r;
+    while(n&gt;0)
+    {
+        r=n%10;
+        temp=temp*10+r;
+        n=Math.floor(n/10);
+    }
+    document.write(&quot;&lt;b&gt;Given number:&lt;/b&gt;&quot;+number+&quot;&lt;br/&gt;&quot;);
+    document.write(&quot;&lt;b&gt;Reverse of the number:&lt;/b&gt;&quot;+temp+&quot;&quot;);
+}
+&lt;/script&gt;
+&lt;/body&gt;
+&lt;/html&gt;</code></pre>
+  </article>
+  <article class="program">
+    <div class="program-head"><div class="number">PROGRAM 13</div><h2>Locate the Mouse Pointer</h2><p class="description">Write a JavaScript program to locate the Mouse Pointer on the screen.</p></div>
+    <div class="code-top"><span>HTML / JAVASCRIPT SOURCE CODE</span><button class="copy" type="button">Copy Code</button></div>
+    <pre><code>&lt;html&gt;
+&lt;head&gt;
+&lt;title&gt;mouse pointer&lt;/title&gt;
+&lt;script type=&quot;text/javascript&quot;&gt;
+function displayPtr(evt)
+{
+    var dom=document.getElementById(&quot;message&quot;)
+    dom.style.left=(evt.clientX-130)+&#x27;px&#x27;;
+    dom.style.top=(evt.clientY-25)+&#x27;px&#x27;;
+    dom.style.visibility=&quot;visible&quot;;
+}
+function hidePtr()
+{
+    document.getElementById(&quot;message&quot;).style.visibility=&quot;hidden&quot;;
+}
+&lt;/script&gt;
+&lt;/head&gt;
+&lt;body onmousedown=&quot;displayPtr(event);&quot;
+onmouseup=&quot;hidePtr();&quot;&gt;
+&lt;p&gt;
+&lt;span id=&quot;message&quot; style=&quot;color:red;position:relative;
+font-size:26pt; font-weight:bold;&quot;&gt;You just cliked here&lt;/span&gt;
+&lt;/p&gt;
+&lt;/body&gt;
+&lt;/html&gt;</code></pre>
+  </article>
+  <article class="program">
+    <div class="program-head"><div class="number">PROGRAM 14</div><h2>Animate a Box</h2><p class="description">Write a JavaScript program to animate a Box.</p></div>
+    <div class="code-top"><span>HTML / JAVASCRIPT SOURCE CODE</span><button class="copy" type="button">Copy Code</button></div>
+    <pre><code>&lt;html&gt;
+&lt;head&gt;
+&lt;title&gt;Animate a box&lt;/title&gt;
+&lt;style&gt;
+#container{
+    width:400px;
+    height:400px;
+    position:relative;
+    background:yellow;
+}
+#animate{
+    width:50px;
+    height:50px;
+    position:absolute;
+    background:red;
+}
+&lt;/style&gt;
+&lt;/head&gt;
+&lt;body&gt;
+&lt;p&gt;
+&lt;button onmousedown=&quot;myMove()&quot;&gt;Click&lt;/button&gt;
+&lt;/p&gt;
+&lt;div id=&quot;container&quot;&gt;
+&lt;div id=&quot;animate&quot;&gt;&lt;/div&gt;&lt;/div&gt;
+&lt;script type=&quot;text/javascript&quot;&gt;
+function myMove(){
+    var ele=document.getElementById(&quot;animate&quot;);
+    var pos=0;
+    var id=setInterval(frame,5);
+    function frame()
+    {
+        if(pos==350)
+        {
+            clearInterval(id);
+        }
+        else{
+            pos++;
+            ele.style.top=pos+&#x27;px&#x27;;
+            ele.style.left=pos+&#x27;px&#x27;;
+        }
+    }
+}
+&lt;/script&gt;
+&lt;/body&gt;
+&lt;/html&gt;</code></pre>
+  </article>
+</main>
+<footer><strong>HTML PROGRAM</strong><br>© 2026 &nbsp; | &nbsp; BUILT FOR LEARNING.</footer>
+<script>
+document.querySelectorAll('.copy').forEach(button => {
+  button.addEventListener('click', async () => {
+    const code = button.closest('.program').querySelector('code').innerText;
+    try {
+      await navigator.clipboard.writeText(code);
+      button.textContent = 'Copied!';
+      setTimeout(() => button.textContent = 'Copy Code', 1500);
+    } catch (e) {
+      const area = document.createElement('textarea');
+      area.value = code;
+      document.body.appendChild(area);
+      area.select();
+      document.execCommand('copy');
+      area.remove();
+      button.textContent = 'Copied!';
+      setTimeout(() => button.textContent = 'Copy Code', 1500);
+    }
+  });
+});
+</script>
+</body>
+</html>
